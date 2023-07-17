@@ -275,30 +275,25 @@ html {
 }
 
 #es-magne-b6.es-magne-b6 .es-benefits__btn {
-    margin: 0 auto;
+    margin: auto;
     padding: 0;
     margin-bottom: 24px;
     border-radius: 50px;
     background-color: #962d38;
-    width: 250px;
+    width: 220px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
     outline: none;
     border: none;
     color: #FFF;
-}
-
-#es-magne-b6.es-magne-b6 .es-benefits__btnTXT {
-    margin: 0;
-    padding: 12px 0;
+    padding: 12px 24px;
     line-height: inherit;
     color: inherit;
     font-family: "Gilroy SemiBold";
     font-size: 20px;
     text-transform: uppercase;
-    margin-left: 26%;
 }
 
 #es-magne-b6.es-magne-b6 .es-benefits__desc {
@@ -309,16 +304,17 @@ html {
     font-family: "Gilroy SemiBold";
     font-size: inherit;
     text-align: center;
-    display: none;
-    overflow: hidden;
+    
 }
 
-#es-magne-b6.es-magne-b6 .es-collapsible:after {
-    content: url("https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-Forte-60-ZAWISZA/main/images/arrow-white.webp"); /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
+#es-magne-b6.es-magne-b6 details > summary {
+    list-style: none;
+}
+
+#es-magne-b6.es-magne-b6 .es-benefits details[open] .es-benefits__chevron {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: all ease-in 200ms;
 }
 
 #es-magne-b6.es-magne-b6 .active:after {
@@ -1050,7 +1046,7 @@ html {
     line-height: inherit;
 }
 #es-magne-b6.es-magne-b6 .es-bold {
-    /* font-family: "Gilroy SemiBold"; */
+     font-family: "Gilroy SemiBold";
 }
 #es-magne-b6.es-magne-b6 .es-footer__content {
     display: flex;

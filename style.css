@@ -275,46 +275,42 @@ html {
 }
 
 #es-magne-b6.es-magne-b6 .es-benefits__btn {
-    margin: auto;
+   
+    margin: 0 auto;
     padding: 0;
     margin-bottom: 24px;
     border-radius: 50px;
     background-color: #962d38;
-    width: 220px;
+    width: 250px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     cursor: pointer;
-    outline: none;
     border: none;
     color: #FFF;
-    padding: 12px 24px;
-    line-height: inherit;
+}
+
+#es-magne-b6.es-magne-b6 .es-benefits__btn::after {
+    content: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-Forte-60-ZAWISZA/main/images/arrow-white.webp);
+}
+
+#es-magne-b6.es-magne-b6 .es-benefits__btnTXT {
     color: inherit;
     font-family: "Gilroy SemiBold";
     font-size: 20px;
     text-transform: uppercase;
+    margin-left: 26%;
 }
 
 #es-magne-b6.es-magne-b6 .es-benefits__desc {
     margin: 0;
-    padding: 16px;
+    padding: 20px;
     line-height: inherit;
     color: inherit;
     font-family: "Gilroy SemiBold";
     font-size: inherit;
     text-align: center;
-    
-}
-
-#es-magne-b6.es-magne-b6 details > summary {
-    list-style: none;
-}
-
-#es-magne-b6.es-magne-b6 .es-benefits details[open] .es-benefits__chevron {
-    transform: rotate(180deg);
-    transform-origin: center;
-    transition: all ease-in 200ms;
+    display: none;
 }
 
 #es-magne-b6.es-magne-b6 .active:after {
@@ -322,6 +318,9 @@ html {
     transform-origin: center;
   }
 
+  #es-magne-b6.es-magne-b6 details > summary {
+    list-style: none;
+  }
 
 #es-magne-b6.es-magne-b6 .es-symptoms {
     background-image: url(https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-Forte-100-ZAWISZA/main/images/background-3.webp);

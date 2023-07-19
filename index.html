@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magne B6 FORTE 60</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- <title>Magne B6 FORTE 60</title> -->
+  <!-- <link rel="stylesheet" href="style.css" /> -->
 </head>
 
 <body>
@@ -486,6 +486,23 @@
 
   </div>
   <script>
+
+function getStyles(href) {
+      var head = document.getElementsByTagName('head')[0];
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = href;
+      head.appendChild(link);
+    }
+    document.onreadystatechange = function () {
+      if (document.readyState === 'complete') {
+        getStyles(
+          'https://s3.eu-central-1.amazonaws.com/cdn.rc-eu-central2.nexus.estorelabs.com/public/static/RC---230322-SF-23-Magne-Forte-100-ZAWISZA/style.css?dl=0'
+        );
+      }
+    };
+
     function handleScreenResize() {
     let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     let detailsElement = document.getElementById("desktopShow");
@@ -569,23 +586,6 @@
       btnIngrShow.classList.remove('active');
     });
   </script>
-  <!-- <script>
-    function getStyles(href) {
-      var head = document.getElementsByTagName('head')[0];
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = href;
-      head.appendChild(link);
-    }
-    document.onreadystatechange = function () {
-      if (document.readyState === 'complete') {
-        getStyles(
-          'https://s3.eu-central-1.amazonaws.com/cdn.rc-eu-central2.nexus.estorelabs.com/public/static/RC---230322-SF-23-Magne-Forte-60-ZAWISZA/style.css?dl=0'
-        );
-      }
-    };
-  </script> -->
 
 </body>
 

@@ -879,6 +879,16 @@ html {
     padding-bottom: 16px;
 }
 
+#es-magne-b6.es-magne-b6 .es-cross__packshot {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#es-magne-b6.es-magne-b6 .es-cross details[open] .es-hide {
+    display: none;
+}
+
 #es-magne-b6.es-magne-b6 .es-cross__img {
     max-width: 100%;
     display: block;
@@ -964,7 +974,7 @@ html {
 
 
 #es-magne-b6.es-magne-b6 .es-cross__hidden {
-    display: none;
+    /* display: none; */
 }
 
 #es-magne-b6.es-magne-b6 .es-deal__img {
@@ -1081,6 +1091,7 @@ html {
     color: #962d38;
     font-size: inherit;
     text-align: left;
+    font-weight: 600;
 }
 
 
@@ -1490,19 +1501,14 @@ html {
     #es-magne-b6.es-magne-b6 .es-cross__btn {
         font-size: 20px;
     }
-    #es-magne-b6.es-magne-b6 .es-cross__btn--mobile {
+    /* #es-magne-b6.es-magne-b6 .es-cross__btn--mobile {
         display: none;
-    }
-    #es-magne-b6.es-magne-b6 .es-cross__hidden {
-        display: block;
-        visibility: visible;
-        height: auto;
-        opacity: 1;
-    }
+    } */
+
     #es-magne-b6.es-magne-b6 .es-cross__title {
         font-size: 40px;
     }
-    #es-magne-b6.es-magne-b6 #es-cross-packshot {
+    #es-magne-b6.es-magne-b6 .es-cross__packshot {
         display: none;
     }
     #es-magne-b6.es-magne-b6 .es-deal__title {

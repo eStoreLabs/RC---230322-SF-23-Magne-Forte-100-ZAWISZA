@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magne B6 FORTE 60</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- <title>Magne B6 FORTE 60</title>
+  <link rel="stylesheet" href="style.css" /> -->
 </head>
 
 <body>
@@ -338,17 +338,15 @@
     <div class="es-cross">
       <p class="es-cross__title">RODZINA MAGNE B<sub class="es-index">6</sub><sup class="es-index">®</sup></p>
 
-      <details class="es-cross__content" id="desktopShow">
-        <summary>
-          <div class="es-cross__packshot es-hide">
-            <img
-              src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-Forte-100-ZAWISZA/main/images/cross-1.webp"
-              alt="" class="es-cross__img" />
-            <p class="es-cross__btn es-cross__btn--mobile">Poznaj wszystkie produkty</p>
-          </div>
-        </summary>
+      <div class="es-cross__content">
+        <div class="es-cross__packshot">
+          <img
+            src="https://raw.githubusercontent.com/eStoreLabs/RC---230322-SF-23-Magne-Forte-100-ZAWISZA/main/images/cross-1.webp"
+            alt="" class="es-cross__img" />
+          <p class="es-cross__btn es-cross__btn--mobile">Poznaj wszystkie produkty</p>
+        </div>
 
-        <div class="es-cross__hidden">
+        <div class="es-cross__mobile-hidden">
           <p class="es-cross__subtitle">Sprawdź leki bez recepty</p>
           <div class="es-cross__content">
             <div class="es-cross__single">
@@ -392,13 +390,7 @@
             </div>
           </div>
         </div>
-      </details>
-
-
-
-
-
-
+      </div>
     </div>
 
 
@@ -486,38 +478,38 @@
 
   </div>
   <script>
-    function handleScreenResize() {
-    let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    let detailsElement = document.getElementById("desktopShow");
-
-    if (screenWidth > 576) {
-      detailsElement.open = true;
-    } else {
-      detailsElement.open = false;
+    function getStyles(href) {
+      var head = document.getElementsByTagName('head')[0];
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = href;
+      head.appendChild(link);
     }
-  }
+    document.onreadystatechange = function () {
+      if (document.readyState === 'complete') {
+        getStyles(
+          'https://s3.eu-central-1.amazonaws.com/cdn.rc-eu-central2.nexus.estorelabs.com/public/static/RC---230322-SF-23-Magne-Forte-100-ZAWISZA/style.css?dl=0'
+        );
+      }
+    };
+  </script>
+  <script>
+    // button in es-benefits section //
+    let btnBenefits = document.querySelector('.es-benefits__btn');
+    let btnBenefitsTxt = document.getElementById('es-benefits__btnTXT');
 
-  // Initial call to handle screen resize
-  handleScreenResize();
-
-  // Event listener for screen resize
-  window.addEventListener("resize", handleScreenResize);
-
-  // button in es-benefits section //
-   let btnBenefits = document.querySelector('.es-benefits__btn');
-   let btnBenefitsTxt = document.getElementById('es-benefits__btnTXT');
-
-     btnBenefits.addEventListener('click', function () {
-       this.classList.toggle('active');
-       let content = this.nextElementSibling;
-       if (content.style.display == 'block') {
-         content.style.display = 'none';
-         btnBenefitsTxt.innerHTML = 'ROZWIŃ';
-       } else {
-         content.style.display = 'block';
-         btnBenefitsTxt.innerHTML = 'ZWIŃ';
-       }
-     });
+    btnBenefits.addEventListener('click', function () {
+      this.classList.toggle('active');
+      let content = this.nextElementSibling;
+      if (content.style.display == 'block') {
+        content.style.display = 'none';
+        btnBenefitsTxt.innerHTML = 'ROZWIŃ';
+      } else {
+        content.style.display = 'block';
+        btnBenefitsTxt.innerHTML = 'ZWIŃ';
+      }
+    });
 
     // buttons in es-dose section //
     let btnDoseShow = document.querySelector('#es-dose__btn');
@@ -543,7 +535,7 @@
       btnDoseTxtTop.innerHTML = 'ROZWIŃ';
     });
 
-     //buttons in es-ingredients section //
+    //buttons in es-ingredients section //
     let btnIngrShow = document.querySelector('.es-ingredients__btn');
     let btnIngrTxtTop = document.getElementsByClassName('es-ingredients__btnTXT')[0];
     let btnIngrHide = document.querySelector('.es-ingredients__btn--hide');
@@ -568,24 +560,18 @@
       btnIngrTxtTop.innerHTML = 'ROZWIŃ';
       btnIngrShow.classList.remove('active');
     });
+
+    // cross sell button
+    let crossBtn = document.querySelector('.es-cross__btn--mobile');
+    let crossUpperCtn = document.querySelector('.es-cross__packshot');
+    let crossLowerCtn = document.querySelector('.es-cross__mobile-hidden');
+    crossBtn.addEventListener('click', function () {
+      crossUpperCtn.style.display = 'none';
+      crossLowerCtn.style.display = 'block';
+    });
+
   </script>
-  <!-- <script>
-    function getStyles(href) {
-      var head = document.getElementsByTagName('head')[0];
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = href;
-      head.appendChild(link);
-    }
-    document.onreadystatechange = function () {
-      if (document.readyState === 'complete') {
-        getStyles(
-          'https://s3.eu-central-1.amazonaws.com/cdn.rc-eu-central2.nexus.estorelabs.com/public/static/RC---230322-SF-23-Magne-Forte-60-ZAWISZA/style.css?dl=0'
-        );
-      }
-    };
-  </script> -->
+  
 
 </body>
 
